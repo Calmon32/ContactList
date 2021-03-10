@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Contact List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React project, created with React Hooks, Sass and [Randomuser.me](https://randomuser.me/).
 
-## Available Scripts
+## Instructions to run the project
 
-In the project directory, you can run:
+Once you've cloned or downloaded the project, navigate to it's folder and run the following commands in a terminal:
+```
+npm install
 
-### `npm start`
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The project will start in development mode, and you'll be able to access it on this url: [http://localhost:3000](http://localhost:3000)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About
 
-### `npm test`
+The goal of this project was to create a contact list based on tabs that would filter users by their name's first letters.
+The users are fetched from [Randomuser.me](https://randomuser.me/) as an easy way of filling up the list with fake data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Throughout the app, I used React hooks as the primary method to manage state, and to pass some of these values down the component tree, I also used props. 
+Due to the size of this project, I've decided that using something like Redux would end up being a bit overkill, and the available hooks would suffice my state management needs. However, if this project were to get further developed and the component and code complexity increased, using a more robust state management together with the hooks would be a must.
 
-### `npm run build`
+In `App.js` you can find the most of the state management, which is then used in all the main components render. It also imports the `useUsers` custom hook, located inside `/UserData.jsx`, which handles the loading and grouping of users coming from the API.
+When the users are grouped, the app uses `groupedUsers` to create the tabs, the list and to get the selected user to be displayed in the contact card.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The contact card also uses some CSS animations to show and hide it, and some media queries throughout the project keep eveything responsive even on mobile devices.
