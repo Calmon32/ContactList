@@ -1,0 +1,33 @@
+.listContainer {
+  z-index: 1;
+  flex: 1;
+  overflow-y: scroll;
+  background-color: white;
+
+  @media only screen and (max-width: 768px) {
+    z-index: 0;
+    width: 100%;
+    border-right: 1px solid rgb(214, 214, 214);
+  }
+
+  p {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+
+    text-align: left;
+
+    border-bottom: 1px solid rgb(214, 214, 214);
+
+    cursor: pointer;
+
+    &.selected {
+      background-color: rgba(0, 0, 0, 0.062);
+    }
+    
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.062);
+    }
+  }
+}

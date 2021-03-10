@@ -1,0 +1,16 @@
+.fieldContainer {
+  width: 100%;
+  padding: 10px 5vw;
+  box-sizing: border-box;
+  text-align: left;
+
+  h5 {
+    text-transform: capitalize;
+    margin: 10px 0;
+  }
+
+  p {
+    margin: 0;
+    white-space: pre-line;
+  }
+}

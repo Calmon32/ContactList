@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+}
+
+.App {
+  display: flex;
+  text-align: center;
+  height: 95vh;
+  max-width: 900px;
+  margin: 2.5vh auto;
+  box-sizing: border-box;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 768px) {
+    height: 100vh;
+    margin: 0;
+  } 
+}
+
+.contactContainer {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #222429;
+  min-width: 400px;
+
+  h2 {
+    position: absolute;
+    color: white;
+    font-weight: 400;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    width: 0px;
+    min-width: 0px;
+    flex: none;
+    overflow: hidden;
+    h2 {
+      position: static;
+    }
+  } 
+}

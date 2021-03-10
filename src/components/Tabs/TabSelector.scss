@@ -1,0 +1,37 @@
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #202327;
+
+  .tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 0 10px;
+    cursor: pointer;
+
+    .tabCharacter {
+      vertical-align: middle;
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+    }
+
+
+    &.empty {
+      cursor: default;
+      .tabCharacter {
+        color: #6b6b6b;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.075)
+    }
+
+    &.selected {
+      background-color: rgba(255, 255, 255, 0.152)
+    }
+  }
+}
