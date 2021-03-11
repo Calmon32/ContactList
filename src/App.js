@@ -7,13 +7,13 @@ import { configJson } from './service/config';
 import './App.scss';
 
 function App() {
-  const { title, tabs } = configJson;
+  const { title, tabs, numberCards } = configJson;
   document.title = title;
 
   const [selectedUser, setSelectedUser] = useState(null);
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
-  const groupedUsers = useUsers();
+  const groupedUsers = useUsers({ tabs, numberCards });
 
   const deselectUser = () => setSelectedUser(null)
 

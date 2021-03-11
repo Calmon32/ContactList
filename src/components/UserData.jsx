@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
-import { configJson } from '../service/config';
 import restApi from "../service/api";
 
-export function useUsers() {
-  const { tabs, numberCards } = configJson;
+export function useUsers({ tabs, numberCards }) {
 
   const [groupedUsers] = useState({});
   const [loading, setLoading] = useState(true);

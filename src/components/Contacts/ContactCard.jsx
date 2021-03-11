@@ -1,10 +1,10 @@
 import ContactField from './ContactField';
-import { Animator } from '../Animator';
+import { useAnimator } from '../Animator';
 import closeIcon from '../../images/close.svg';
 import './ContactCard.scss';
 
 function ContactCard({ user, close }) {
-  const { state, animate } = Animator(500)
+  const { state, animate } = useAnimator(500)
   
   const closeCard = async () => {
     await animate(false)

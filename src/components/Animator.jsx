@@ -1,23 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { timeout } from '../service/timeout'
 
-export function Animator(animatorTimeout) {
+export function useAnimator(animatorTimeout) {
 
   const [state, setState] = useState(false);
  
   useEffect(() => {
     timeout(100).then(() => animate(!state))
   }, []);
-
-  function timeout(time) {
-    return new Promise(resolve => { 
-      setTimeout(resolve, time);
-    });
-  }
-
-  async function animate(to) {
+  
+  const animate = useCallback(async (to) => {
     setState(to);
     await timeout(animatorTimeout);
-  }
+  }, [])
 
   return { state, animate }
 }

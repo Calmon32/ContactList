@@ -5,9 +5,13 @@ class Api {
     this.baseURL = baseURL;
   }
 
-  async getUser(params) {
-    const response = await axios.get('/', { baseURL: this.baseURL, params });
-    return response.data
+  async getUser(params = {}) {
+    try {
+      const response = await axios.get('/', { baseURL: this.baseURL, params });
+      return response.data
+    } catch (error) {
+      console.error(error)
+    }
   }
 
 }
