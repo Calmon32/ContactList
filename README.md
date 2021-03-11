@@ -13,6 +13,13 @@ npm start
 
 The project will start in development mode, and you'll be able to access it on this url: [http://localhost:3000](http://localhost:3000)
 
+## Run tests
+
+To run the tests I've written, run the following commands:
+```
+npm run test
+```
+
 ## About
 
 The goal of this project was to create a contact list based on tabs that would filter users by their name's first letters.
