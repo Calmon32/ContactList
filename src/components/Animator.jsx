@@ -5,7 +5,7 @@ export function Animator(animatorTimeout) {
   const [state, setState] = useState(false);
  
   useEffect(() => {
-    animate(!state);
+    timeout(100).then(() => animate(!state))
   }, []);
 
   function timeout(time) {
